@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --custom-orange: #FF6B35;
+  }
+  
+  .bg-custom-orange {
+    background-color: var(--custom-orange);
+  }
+  
+  .text-custom-orange {
+    color: var(--custom-orange);
+  }

@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - TouristGuide</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        @media (max-width: 640px) {
+            .responsive-text {
+                font-size: 0.875rem;
+            }
+        }
+        .current-page {
+            color: #2563eb; /* blue-600 */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="bg-blue-50 text-gray-800 font-['Roboto',sans-serif]">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-xl font-semibold">TouristGuide</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search..." class="w-48 px-3 py-1 text-sm rounded-full border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent">
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-500">
+                        <i class="fas fa-search text-sm"></i>
+                    </button>
+                </div>
+                <nav class="hidden md:flex space-x-4">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600" id="nav-home">Home</a>
+                    <a href="explore.html" class="text-gray-700 hover:text-blue-600" id="nav-explore">Explore</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600" id="nav-about">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-blue-600" id="nav-contact">Contact</a>
+                </nav>
+                <a class="bg-blue-600 text-white px-3 py-1 rounded text-sm hover:bg-blue-700 transition duration-300" href="login.html">Login</a>
+                <button class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-4 py-2">
+                <div class="relative">
+                    <input type="text" placeholder="Search..." class="w-full px-3 py-1 text-sm rounded-full border border-gray-300 focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent">
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-blue-500">
+                        <i class="fas fa-search text-sm"></i>
+                    </button>
+                </div>
+            </div>
+            <a class="block py-2 px-4 text-gray-700 hover:bg-blue-100" href="index.html">Home</a>
+            <a class="block py-2 px-4 text-gray-700 hover:bg-blue-100" href="explore.html">Explore</a>
+            <a class="block py-2 px-4 text-gray-700 hover:bg-blue-100" href="about.html">About</a>
+            <a class="block py-2 px-4 text-gray-700 hover:bg-blue-100" href="contact.html">Contact</a>
+        </div>
+    </header>
+
+    <main class="flex-grow flex items-center justify-center p-4">
+        <div class="bg-white shadow-lg flex flex-col md:flex-row rounded-lg overflow-hidden w-full max-w-4xl">
+            <div class="bg-blue-600 md:w-1/3 h-[400px] md:h-[600px]">
+                <img src="contact.jpg" 
+                     alt="Contact Us Concept" 
+                     class="w-full h-full object-cover object-center"
+                />
+            </div>
+            <div class="p-6 md:p-8 md:w-2/3">
+                <h2 class="text-xl font-bold text-blue-600 mb-4 responsive-text">Send a Message</h2>
+                <form>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                            <input type="text" id="first-name" class="w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" value="">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                            <input type="text" id="last-name" class="w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="mobile" class="block text-sm font-medium text-gray-700 mb-1">Mobile Number</label>
+                            <input type="text" id="mobile" class="w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Write your message here...</label>
+                        <textarea id="message" rows="4" class="w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition duration-300 text-sm font-medium">Send</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Function to highlight the current page in the navigation
+        function highlightCurrentPage() {
+            const currentPage = window.location.pathname.split("/").pop();
+            const navLinks = {
+                "index.html": "nav-home",
+                "explore.html": "nav-explore",
+                "about.html": "nav-about",
+                "contact.html": "nav-contact"
+            };
+
+            const currentNavId = navLinks[currentPage] || "nav-home";
+            document.getElementById(currentNavId).classList.add("current-page");
+        }
+
+        // Call the function when the page loads
+        window.addEventListener("load", highlightCurrentPage);
+
+        // Toggle mobile menu
+        document.querySelector('button').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
